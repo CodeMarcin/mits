@@ -1,9 +1,11 @@
 <script setup lang="ts">
 export interface IClickableItemProps<T> {
+  name: string;
   title: string;
   description: string;
   icon: Component;
   className: T;
+  activeItemName?: string | null;
 }
 
 export interface IClickableItemCustomClass {
@@ -18,7 +20,7 @@ export interface IClickableItemTypedClass {
   type: "blue" | "green" | "red";
 }
 
-const { title, description, icon, className } = defineProps<IClickableItemProps<IClickableItemCustomClass | IClickableItemTypedClass>>();
+const { name, title, description, icon, className, activeItemName } = defineProps<IClickableItemProps<IClickableItemCustomClass | IClickableItemTypedClass>>();
 
 const itemClassName = computed(() => {
   const { type, titleClass, borderIconclass } = className;
@@ -38,7 +40,7 @@ const itemClassName = computed(() => {
 </script>
 
 <template>
-  <div class="flex cursor-pointer flex-col gap-y-4 rounded-lg p-3 transition-all hover:shadow-xl">
+  <div :class="[`flex cursor-pointer flex-col gap-y-4 rounded-lg p-3 transition-all hover:shadow-xl`, activeItemName === name ? 'shadow-xl' : ``]">
     <div class="flex w-full items-center gap-x-3">
       <div :class="[`flex h-[32px] w-[32px] items-center justify-center rounded-md border-2`, itemClassName.borderIconclass]">
         <component :is="icon" />
