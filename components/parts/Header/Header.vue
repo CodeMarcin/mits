@@ -12,9 +12,9 @@ const { title, subTitle, description, className } = withDefaults(defineProps<IHe
 </script>
 
 <template>
-  <div :class="[className, `flex flex-col items-center mx-auto max-w-xl text-center gap-y-8`]">
-    <p class="text-title text-sm">{{ title }}</p>
-    <p class="text-main font-semibold max-w-xs">{{ subTitle }}</p>
-    <p class="text-second">{{ description }}</p>
+  <div :class="[className, `mx-auto flex max-w-[275px] flex-col items-center gap-y-4 text-center`]">
+    <p class="text-title font-fontSecond text-[10px]">{{ title }}</p>
+    <p class="text-main max-w-xs text-[15px] font-semibold">{{ subTitle }}</p>
+    <p class="text-second font-fontSecond text-[9px]">{{ description }}</p>
   </div>
 </template>
