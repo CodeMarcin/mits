@@ -6,8 +6,8 @@ export interface IClickableListProps {
   props: IClickableItemProps<IClickableItemCustomClass | IClickableItemTypedClass>[];
 }
 const clickableItemsStore = useClickableItemsStore();
-const { handleClickItemAction } = clickableItemsStore;
 const { getActiveItem} =  storeToRefs(clickableItemsStore)
+const { handleClickItemAction } = clickableItemsStore;
 const { props } = defineProps<IClickableListProps>();
 </script>
 <template>

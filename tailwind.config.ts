@@ -23,4 +23,7 @@ export default <Partial<Config>>{
       fontSecond: "Poppins",
     },
   },
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 };

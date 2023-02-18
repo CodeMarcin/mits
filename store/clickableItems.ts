@@ -19,5 +19,5 @@ export const useClickableItemsStore = defineStore("clickableItemsStore", () => {
     console.log("All items clicked => ", toRaw(clickableItemsState.counts));
   };
 
-  return { clickableItemsState, handleClickItemAction, getActiveItem };
+  return { getActiveItem, handleClickItemAction };
 });
