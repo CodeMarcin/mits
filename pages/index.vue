@@ -2,4 +2,5 @@
 
 <template>
   <ComplexTheSectionA />
+  <ComplexTheSectionB />
 </template>
