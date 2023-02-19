@@ -10,14 +10,14 @@ export interface IAnimatedCountItemProps {
 
 const { icon, startAmount, endAmount, duration, suffix, description } = withDefaults(defineProps<IAnimatedCountItemProps>(), {
   startAmount: 0,
-  duration: 2,
+  duration: 1,
 });
 </script>
 
 <template>
   <div class="flex flex-col items-center text-white">
     <component :is="icon" class="mb-[25px]" />
-    <p class="mb-[14px] text-[22px]"><vue3-autocounter :startAmount="startAmount" :endAmount="endAmount" :duration="duration" />{{ suffix }}</p>
+    <p class="mb-[14px] text-[22px]"><vue3-autocounter :startAmount="startAmount" separator :suffix="suffix" :endAmount="endAmount" :duration="duration" /></p>
     <p class="text-[10px]">{{ description }}</p>
   </div>
 </template>

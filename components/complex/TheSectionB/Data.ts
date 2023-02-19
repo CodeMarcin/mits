@@ -8,25 +8,25 @@ import { IAnimatedCountItemProps } from "~~/components/parts/AnimatedCount/Anima
 
 export const ARRAY__ANIMATED_COUNT: IAnimatedCountItemProps[] = [
   {
-    icon: <Downloads />,
+    icon: Downloads,
     endAmount: 25,
     suffix: "K+",
     description: ANIMATED_COUNT_LABELS.ANIMATED_COUNT_FIRST_DESCRIPTION,
   },
   {
-    icon: <Heart />,
+    icon: Heart ,
     endAmount: 1200,
     suffix: "+",
     description: ANIMATED_COUNT_LABELS.ANIMATED_COUNT_SECOND_DESCRIPTION,
   },
   {
-    icon: <ActiveUser />,
+    icon: ActiveUser,
     endAmount: 14,
     suffix: "K+",
     description: ANIMATED_COUNT_LABELS.ANIMATED_COUNT_THIRD_DESCRIPTION,
   },
   {
-    icon: <Reviews />,
+    icon: Reviews ,
     endAmount: 3500,
     suffix: "+",
     description: ANIMATED_COUNT_LABELS.ANIMATED_COUNT_FOURTH_DESCRIPTION,

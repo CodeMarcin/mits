@@ -1,0 +1,55 @@
+.carousel {
+  @apply relative box-border;
+}
+
+.carousel * {
+  @apply box-border;
+}
+
+.carousel__track {
+  @apply m-0 flex items-start p-0;
+}
+
+.carousel__viewport {
+  @apply overflow-hidden;
+}
+
+.carousel__slide {
+  @apply relative m-0 flex shrink-0 items-center justify-center;
+}
+
+.carousel__slide {
+  @apply scale-90;
+}
+
+.carousel__slide--sliding {
+  @apply transition-all duration-500;
+}
+
+.carousel__slide--visible:not(.carousel__slide--active):not(.carousel__slide--prev):not(.carousel__slide--next) {
+  @apply z-10 translate-x-[60px] scale-90;
+}
+
+.carousel__slide--active ~ .carousel__slide--visible:not(.carousel__slide--next) {
+  @apply z-0 -translate-x-[60px] scale-90 !important;
+}
+
+.carousel__slide--prev {
+  @apply z-10 translate-x-[30px] scale-90;
+}
+
+.carousel__slide--next {
+  @apply z-10 -translate-x-[30px] scale-90;
+}
+
+.carousel__slide--active {
+  @apply z-20 scale-100;
+}
+
+.carousel__slide--active .border--svg {
+  @apply stroke-[#5578B9] transition-all;
+}
+
+.carousel__liveregion {
+  @apply hidden
+}
