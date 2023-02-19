@@ -15,28 +15,28 @@ export const OBJECT__HEADER: IHeaderProps = {
 
 export const ARRAY__CLICKABLE_LIST: IClickableItemProps<IClickableItemTypedClass>[] = [
   {
-    name: 'install-the-app',
+    name: "install-the-app",
     title: CLICKABLE_LIST_LABELS.CLICKABLE_LIST_ITEM_FIRST_TITLE,
     description: CLICKABLE_LIST_LABELS.CLICKABLE_LIST_ITEM_FIRST_DESCRIPTION,
-    icon: <FingerPrint />,
+    icon: FingerPrint,
     className: {
       type: "blue",
     },
   },
   {
-    name: 'login-first',
+    name: "login-first",
     title: CLICKABLE_LIST_LABELS.CLICKABLE_LIST_ITEM_SECOND_TITLE,
     description: CLICKABLE_LIST_LABELS.CLICKABLE_LIST_ITEM_SECOND_DESCRIPTION,
-    icon: <Block />,
+    icon: Block,
     className: {
       type: "red",
     },
   },
   {
-    name: 'setup-your-profile',
+    name: "setup-your-profile",
     title: CLICKABLE_LIST_LABELS.CLICKABLE_LIST_ITEM_THIRD_TITLE,
     description: CLICKABLE_LIST_LABELS.CLICKABLE_LIST_ITEM_THIRD_DESCRIPTION,
-    icon: <User />,
+    icon: User,
     className: {
       type: "green",
     },
