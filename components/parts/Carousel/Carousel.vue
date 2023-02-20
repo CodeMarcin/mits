@@ -30,7 +30,7 @@ const { slides } = defineProps<ICarouselProps>();
       <component :is="slide" />
     </slide>
     <template #addons>
-      <div class="absolute top-1/2 flex w-full justify-between">
+      <div class="absolute top-1/2 flex w-10/12 -translate-x-1/2 left-1/2 justify-between">
         <Arrow class="rotate-180 cursor-pointer" @click="handlPrev" @keyup="handlPrev" tabindex="1" :aria-label="LABEL__PREV" />
         <Arrow class="cursor-pointer" @click="handleNext" @keyup="handleNext" tabindex="1" :aria-label="LABEL__NEXT" />
       </div>

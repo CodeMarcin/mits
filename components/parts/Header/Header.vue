@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { ScrollTrigger, gsap } from "gsap/all";
 
 export interface IHeaderProps {
   title: string;

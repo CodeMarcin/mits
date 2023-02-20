@@ -17,7 +17,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="container mx-auto mt-[57px] flex w-full max-w-xl flex-col px-6">
+  <div class="container mx-auto mt-[57px] flex w-full max-w-3xl flex-col px-6">
     <PartsHeader v-bind="OBJECT__HEADER" />
     <div ref="carouselRef">
       <PartsCarousel v-bind="ARRAY__CAROUSEL" />

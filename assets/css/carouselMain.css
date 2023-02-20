@@ -1,5 +1,5 @@
 .carousel {
-  @apply relative box-border mt-[17px];
+  @apply relative box-border my-[17px];
 }
 
 .carousel * {
@@ -11,7 +11,7 @@
 }
 
 .carousel__viewport {
-  @apply overflow-hidden;
+  @apply overflow-hidden py-[35px];
 }
 
 .carousel__slide {
@@ -23,23 +23,23 @@
 }
 
 .carousel__slide--visible:not(.carousel__slide--active):not(.carousel__slide--prev):not(.carousel__slide--next) {
-  @apply z-10 translate-x-[60px];
+  @apply z-10 translate-x-[100px];
 }
 
 .carousel__slide--active ~ .carousel__slide--visible:not(.carousel__slide--next) {
-  @apply z-0 -translate-x-[60px] !important;
+  @apply z-0 -translate-x-[100px] !important;
 }
 
 .carousel__slide--prev {
-  @apply z-10 translate-x-[30px];
+  @apply z-10 translate-x-[60px];
 }
 
 .carousel__slide--next {
-  @apply z-10 -translate-x-[30px];
+  @apply z-10 -translate-x-[60px];
 }
 
 .carousel__slide--active {
-  @apply z-20 scale-110;
+  @apply z-20 scale-105;
 }
 
 .carousel__slide--active .border--svg {
