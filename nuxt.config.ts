@@ -1,7 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "nuxt-svgo", "@nuxtjs/google-fonts", "@pinia/nuxt"],
-
+  app: {
+    head: {
+      charset: "utf-16",
+      viewport: "width=device-width, initial-scale=1",
+      title: "@MITS",
+      meta: [{ name: "description", content: "Hope it is ok" }],
+    },
+  },
   svgo: {
     svgoConfig: {
       multipass: true,

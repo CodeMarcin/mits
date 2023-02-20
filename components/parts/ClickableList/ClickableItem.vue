@@ -40,10 +40,10 @@ const itemClassName = computed(() => {
 </script>
 
 <template>
-  <div tabindex="1" :class="[`flex cursor-pointer flex-col gap-y-4 rounded-lg p-3 transition-all hover:shadow-xl`, activeItemName === name ? 'shadow-xl' : ``]">
-    <div tabindex="1" class="flex w-full items-center gap-x-3">
+  <div tabindex="1" :class="[`flex cursor-pointer flex-col rounded-lg p-3 transition-shadow hover:shadow-xl`, activeItemName === name ? 'shadow-xl' : ``]">
+    <div tabindex="1" class="mb-[24px] flex w-full items-center gap-x-3">
       <div tabindex="1" :class="[`flex h-[32px] w-[32px] items-center justify-center rounded-md border-2`, itemClassName.borderIconclass]">
-        <component :is="icon" />
+        <component :is="icon" :aria-label="`${LABEL__ICON} ${title}`" />
       </div>
       <p tabindex="1" :class="[itemClassName.titleClass, `text-[12px] font-medium`]">{{ title }}</p>
     </div>
