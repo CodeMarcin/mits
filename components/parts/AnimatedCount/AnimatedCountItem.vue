@@ -8,16 +8,38 @@ export interface IAnimatedCountItemProps {
   description: string;
 }
 
+const numberRef = ref();
+const updateInterval = ref();
+
 const { icon, startAmount, endAmount, duration, suffix, description } = withDefaults(defineProps<IAnimatedCountItemProps>(), {
   startAmount: 0,
-  duration: 1,
+  duration: 2000,
+});
+
+onMounted(() => {
+  updateInterval.value = useAnimateCount(numberRef, startAmount, endAmount, duration);
+});
+
+onUnmounted(() => {
+  clearInterval(updateInterval.value);
 });
 </script>
 
 <template>
   <div class="flex flex-col items-center text-white">
     <component :is="icon" class="mb-[25px]" />
-    <p class="mb-[14px] text-[22px]"><vue3-autocounter :startAmount="startAmount" separator :suffix="suffix" :endAmount="endAmount" :duration="duration" /></p>
+    <p class="mb-[14px] text-[22px]">
+
+      <!-- comment out from this line if you want to use vue3-autocounter-->
+        <span ref="numberRef">{{ startAmount }}</span>
+        <span>{{ suffix }}</span>
+      <!-- comment out to this line if you want to use vue3-autocounter -->
+
+      <!-- here we can use vue3-autocounter instead of a self-written function -->
+        <!-- <vue3-autocounter :startAmount="startAmount" separator :suffix="suffix" :endAmount="endAmount" :duration="duration" /> -->
+      <!-- end -->
+
+    </p>
     <p class="text-[10px]">{{ description }}</p>
   </div>
 </template>

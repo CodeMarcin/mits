@@ -9,5 +9,5 @@ const { props } = defineProps<IAnimatedCountProps>();
 </script>
 
 <template>
-  <div class="flex w-full justify-between"><PartsAnimatedCountItem v-for="item in props" v-bind="item" :key="item.description" /></div>
+  <div class="flex w-full gap-5 flex-col sm:flex-row justify-between"><PartsAnimatedCountItem v-for="item in props" v-bind="item" :key="item.description" /></div>
 </template>

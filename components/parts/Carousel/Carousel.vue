@@ -19,8 +19,8 @@ const { slides } = defineProps<ICarouselProps>();
 
 <template>
   <carousel ref="carouselRef" :settings="carouselSettings">
-    <slide v-for="(slide, index) in slides" :key="index" tabindex="1">
-      <component :is="slide"/>
+    <slide v-for="(slide, index) in slides" :key="index" >
+      <component :is="slide" tabindex="1"/>
     </slide>
     <template #addons>
       <div class="absolute top-1/2 flex w-full justify-between">
