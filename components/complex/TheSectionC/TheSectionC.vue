@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { OBJECT__HEADER, ARRAY__CAROUSEL } from "./Data";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { OBJECT__HEADER, ARRAY__CAROUSEL } from "./Data";
 const carouselRef = ref();
 gsap.registerPlugin(ScrollTrigger);
 

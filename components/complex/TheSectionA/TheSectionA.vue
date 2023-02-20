@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { OBJECT__HEADER, ARRAY__CLICKABLE_LIST } from "./Data";
 

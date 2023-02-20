@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { storeToRefs } from "pinia";
 import { useClickableItemsStore } from "~/store/clickableItems";
