@@ -17,6 +17,7 @@
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.0.0-1",
     "@pinia/nuxt": "^0.4.6",
+    "gsap": "^3.11.4",
     "pinia": "^2.0.30",
     "vue3-autocounter": "^1.0.6",
     "vue3-carousel": "^0.2.9"

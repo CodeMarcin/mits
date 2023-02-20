@@ -5,9 +5,13 @@ export const useClickableItemsStore = defineStore("clickableItemsStore", () => {
 
   const getActiveItem = computed(() => clickableItemsState.activeItem);
 
-  const handleClickItemAction = (name: string) => {
-    if (clickableItemsState.activeItem === name) {
-      Object.assign(clickableItemsState, { ...clickableItemsState, activeItem: null });
+  const setNoActiveItem = () => {
+    Object.assign(clickableItemsState, { ...clickableItemsState, activeItem: null });
+  };
+
+  const handleClickItemAction = (name: string | null) => {
+    if (clickableItemsState.activeItem === name || !name) {
+      setNoActiveItem();
       console.log("=> Clicked not saved <=");
       return;
     }
@@ -19,5 +23,11 @@ export const useClickableItemsStore = defineStore("clickableItemsStore", () => {
     console.log("All items clicked => ", toRaw(clickableItemsState.counts));
   };
 
-  return { getActiveItem, handleClickItemAction };
+  const handleClickAway = (e: Event) => {
+    e.stopPropagation();
+    const target = e.target as HTMLElement;
+    if (!target?.dataset?.name || !target.closest("[data-name")) setNoActiveItem();
+  };
+
+  return { getActiveItem, handleClickItemAction, handleClickAway };
 });

@@ -26,13 +26,13 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center text-white">
-    <component :is="icon" class="mb-[25px]" />
+  <div class="flex flex-col items-center text-white" tabindex="1">
+    <component :is="icon" class="mb-[25px]" :aria-label="`${LABEL__ICON} ${description}`"  tabindex="1"/>
     <p class="mb-[14px] text-[22px]">
 
       <!-- comment out from this line if you want to use vue3-autocounter-->
-        <span ref="numberRef">{{ startAmount }}</span>
-        <span>{{ suffix }}</span>
+        <span ref="numberRef" tabindex="1">{{ startAmount }}</span>
+        <span tabindex="1">{{ suffix }}</span>
       <!-- comment out to this line if you want to use vue3-autocounter -->
 
       <!-- here we can use vue3-autocounter instead of a self-written function -->
@@ -40,6 +40,6 @@ onUnmounted(() => {
       <!-- end -->
 
     </p>
-    <p class="text-[10px]">{{ description }}</p>
+    <p class="text-[10px]" tabindex="1">{{ description }}</p>
   </div>
 </template>
