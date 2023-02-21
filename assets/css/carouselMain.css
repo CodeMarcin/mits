@@ -23,19 +23,19 @@
 }
 
 .carousel__slide--visible:not(.carousel__slide--active):not(.carousel__slide--prev):not(.carousel__slide--next) {
-  @apply z-10 translate-x-[100px];
+  @apply z-10  translate-x-[60px] sm:translate-x-[100px];
 }
 
 .carousel__slide--active ~ .carousel__slide--visible:not(.carousel__slide--next) {
-  @apply z-0 -translate-x-[100px] !important;
+  @apply z-0 -translate-x-[60px] sm:-translate-x-[100px] !important;
 }
 
 .carousel__slide--prev {
-  @apply z-10 translate-x-[60px];
+  @apply z-10 translate-x-[30px] sm:translate-x-[60px];
 }
 
 .carousel__slide--next {
-  @apply z-10 -translate-x-[60px];
+  @apply z-10 -translate-x-[30px] sm:-translate-x-[60px];
 }
 
 .carousel__slide--active {

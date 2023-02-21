@@ -6,23 +6,26 @@ export interface IAnimatedCountItemProps {
   duration?: number;
   suffix: string;
   description: string;
+  animationEnd?: boolean;
 }
-
 const numberRef = ref();
 const updateInterval = ref();
 
-const { icon, startAmount, endAmount, duration, suffix, description } = withDefaults(defineProps<IAnimatedCountItemProps>(), {
+const props = withDefaults(defineProps<IAnimatedCountItemProps>(), {
   startAmount: 0,
   duration: 2000,
 });
 
-onMounted(() => {
-  updateInterval.value = useAnimateCount(numberRef, startAmount, endAmount, duration);
-});
+const { icon, startAmount, endAmount, duration, suffix, description } = props;
 
-onUnmounted(() => {
-  clearInterval(updateInterval.value);
-});
+watch(
+  () => props.animationEnd,
+  (newValu) => {
+    if (newValu) updateInterval.value = useAnimateCount(numberRef, startAmount, endAmount, duration);
+  }
+);
+
+onUnmounted(() => clearInterval(updateInterval.value));
 </script>
 
 <template>
